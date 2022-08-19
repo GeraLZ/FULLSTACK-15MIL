@@ -1,0 +1,31 @@
+#SIEMPRE PONER LA LINEA DE ABAJO EN LOS .SH
+#!/bin/bash
+
+##EN LA TERMINAL DE KALI, chmod 755 comandosNiktoDominios.sh
+#./comandosDominios.sh
+
+nikto -host https://midomimiovidaLoca.com  -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_vidaLoca_Name.txt #DOMINIO
+nikto -host https://midomimio1.com  -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_Domain1_Name.txt #DOMINIO
+nikto -host https://midomimio2.com  -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_Domain2_Name.txt #DOMINIO
+nikto -host https://midomimio3.com  -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_Domain3_Name.txt #DOMINIO
+nikto -host https://midomimio4.com  -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_Domain4_Name.txt #DOMINIO
+
+
+##EN LA TERMINAL DE KALI, chmod 755 comandosNiktoIPs.sh
+#./comandosIPs.sh
+nikto -host 200.77.33.43 -P 80,443,8080 -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_200.77.33.43_Name.txt #IP
+nikto -host 200.77.33.44 -P 80 -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_200.77.33.44_Name.txt #IP
+nikto -host 200.77.33.45 -P 80,443 -ask no -maxtime 8m > /home/kali/Desktop/NIKTO_200.77.33.45_Name.txt #IP
+
+##EN LA TERMINAL DE KALI, chmod 755 nmapsIPS.sh, EL NMAP SOLO EN IPs
+#sudo ./nmapsIPS.sh
+#cambiar de propietario con su chown a tu usuario normal de kali
+
+sudo nmap -Pn -sV -O --script vuln -d -oN /home/kali/Desktop/NMAP-IP-200.77.33.43.txt 200.77.33.43
+sudo nmap -Pn -sV -O --script vuln -d -oN /home/kali/Desktop/NMAP-IP-200.77.33.44.txt 200.77.33.44
+sudo nmap -Pn -sV -O --script vuln -d -oN /home/kali/Desktop/NMAP-IP-200.77.33.45.txt 200.77.33.45
+sudo nmap -Pn -sV -O --script vuln -d -oN /home/kali/Desktop/NMAP-IP-200.77.33.46.txt 200.77.33.46
+
+##EN LA TERMINAL DE KALI simplemente correr y sacar captura , dura 1 min
+wafw00f -v  https://200.77.33.43
+wafw00f -v  https://midominioVidaLoca.com
