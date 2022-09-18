@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-color: #ebebeb;   
+}
+
+header{
+    background-color: #EAC926;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+}
+
+div#center{
+    text-align: center;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.fa-bars{
+    background-color: #03264C;
+    color: white;
+    border-radius: 15%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+p#titular{
+    font-size: 24px;
+}
+
+p#cuerpo{
+    font-size: 12px;
+}
+
+p#precios{
+    font-size: 18px;
+}
+
+p#desc{
+    font-size: 16px;
+}
+
+.img-logo{
+    width: 70%;
+}
+
+.img-producto{
+    width: 50%;
+}
+
+/*#paleta { 
+    Amaruillo: #EAC926;
+    Azul: #03264C;
+    Celeste: #1259c3;
+    Gris oscuro: #666;
+    Gris claro: #ebebeb;
+    Verde: #39b54a; 
+}-->*/
