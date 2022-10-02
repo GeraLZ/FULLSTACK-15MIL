@@ -1,40 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
-body{
-    background-color: #ebebeb;   
+body {
+    background-color: #ebebeb;
 }
 
-header{
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*         HEADER SECTION         */
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+header {
     background-color: #EAC926;
 }
 
-ul{
-    list-style-type: none;
+nav {
+    display: none;
 }
 
-img{
-    width: 100%;
-}
-
-div#center{
+.acomodo-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.center{
+form.buscador{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-grow: 5;
+    width: 45%;
+}
+
+.advice{
+    text-align: center;
+    justify-content: center;
+}
+
+input{
+    width: 80%;
+    max-width: 500px;
+}
+
+/*----------IMG-----------*/
+.img-logo{
+    width: 50%;
+    padding: 10px;
+    flex-grow: 5;
+}
+
+.img-banner{
+    width: 100%;
+}
+
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*          MAIN SECTION          */
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+footer {
+    margin: 10px;
+}
+
+.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.fa-bars{
-    background-color: #03264C;
+
+/*PRODUCTOS---------------------------*/
+
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto {
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+.contenedor {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+/*TEXT ICONS---------------------------*/
+.fa-bars {
+    background-color: #1259C3;
     color: white;
     border-radius: 15%;
     padding: 10px;
@@ -42,35 +115,124 @@ div#center{
     font-size: 20px;
 }
 
-p#titular{
+.fa-credit-card {
+    color: #1259C3;
+}
+
+.fa-gift {
+    color: #1259C3;
+}
+
+.fa-user-shield {
+    color: #1259C3;
+}
+
+.fa-truck-moving {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.fa-search{
+    color: #1259C3;
+}
+
+/*TEXT STYLES------------------------------*/
+.titular {
     font-size: 24px;
 }
 
-p#cuerpo{
-    font-size: 12px;
-}
-
-p#precios{
+.precios {
     font-size: 18px;
+    flex-grow: 3;
 }
 
-p#desc{
+.descuento {
     font-size: 16px;
+    color: #39b54a;
+    flex-grow: 7;
 }
 
-.img-logo{
-    width: 70%;
+.descripcion {
+    font-size: 16px;
+    display: none;
 }
 
-.img-producto{
-    width: 50%;
+/*IMG SIZES*/
+
+.img-producto {
+    width: 100%;
 }
 
-/*#paleta { 
-    Amaruillo: #EAC926;
-    Azul: #03264C;
-    Celeste: #1259c3;
-    Gris oscuro: #666;
-    Gris claro: #ebebeb;
-    Verde: #39b54a; 
-}-->*/
+/*VIEWPORT TABLET*/
+@media (min-width: 361px) {
+    .acomodo-head{
+        flex-wrap: nowrap;
+    }
+    .img-logo{
+        width: 30%;
+    }
+    .buscador{
+        width: 30%;
+    }
+    .advice{
+        width: 35%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    nav a{
+        text-decoration: none;
+        color: black;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding: 5px;
+        justify-content: space-between;
+    }
+
+    li{
+        padding: 5px;
+    }
+
+    section#menu {
+        display: none;
+    }
+
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 42%;
+    }
+
+    .descripcion {
+        display: block;
+        padding: 10px;
+    }
+
+}
+
+/*VIEWPORT DESKTOP*/
+@media (min-width: 769px) {
+    .producto {
+        width: 22%;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+}
